@@ -50,7 +50,7 @@ $cuerpo .= $mensaje;
 $cuerpo .= "\n";
 
 //DIRECCIÓN
-$enviarA = 'tucorreo@tudominio.com'; //REEMPLAZAR CON TU CORREO ELECTRÓNICO
+$enviarA = 'fmartinvillaf@gmail.com'; //REEMPLAZAR CON TU CORREO ELECTRÓNICO
 $asunto = 'Nuevo mensaje de mi sitio web';
 
 //ENVIAR CORREO
@@ -60,5 +60,3 @@ if($error == ''){
 }else{
     echo $error;
 }
-
-?>
