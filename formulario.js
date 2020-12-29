@@ -6,20 +6,22 @@ $('#formulario').submit(function (event) {
 function enviar() {
   //console.log("ejecutado");
   var datos = $('#formulario').serialize(); //toma los datos "name" y los lleva a un arreglo.
- $.ajax({
-        type: "post",
-        url:"formulario.php",
-        data: datos,
-        success: function(texto){
-            console.log(texto)
-            if(texto.trim() === "exito"){
-                correcto();
-            }else{
-                phperror(texto);
-            }
-        }
-    })
+  $.ajax({
+    type: 'post',
+    url: 'formulario.php',
+    data: datos,
+    success: function (texto) {
+      console.log(texto);
+      if (texto === 'exito') {
+        correcto();
+      } else {
+        phperror(texto);
+      }
+    },
+  });
+}
 function correcto() {
+  $('#formulario')[0].reset();
   $('#mensajeExito').removeClass('d-none');
   $('#mensajeError').addClass('d-none');
 }

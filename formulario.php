@@ -1,6 +1,10 @@
 ﻿<?php
 
-$error = '';
+$nombre = "";
+$email = "";
+$mensaje = "";
+$error = "";
+$cuerpo = "";
 
 //VALIDANDO NOMBRE
 if (empty($_POST["nombre"])) {
